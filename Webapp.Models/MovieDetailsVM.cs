@@ -10,8 +10,8 @@ namespace Webapp.Models
     {
         public Movie movie { get; set; }
         public List<Actor> actors { get; set; }
-        public List<RedditPost> RedditPosts { get; set; } // Add this line
-        public double PercentScore { get; set; } // Add this line
+        public List<RedditPost> RedditPosts { get; set; }
+        public double PercentScore { get; set; }
         public string OverallSentiment { get; set; }
     }
 }

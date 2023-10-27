@@ -27,4 +27,8 @@
     <ProjectReference Include="..\Webapp.Models\Webapp.Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\imgs\" />
+  </ItemGroup>
+
 </Project>

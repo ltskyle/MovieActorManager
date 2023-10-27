@@ -19,8 +19,8 @@ namespace Webapp.Models
         [DataType(DataType.Upload)]
         [DisplayName("Movie Image")]
         public byte[]? MovieImage { get; set; }
-        public double PercentScore { get; set; }
-        public string OverallSentiment { get; set; }
-        public List<RedditPost> RedditPosts { get; set; }
+        public double? PercentScore { get; set; }
+        public string? OverallSentiment { get; set; }
+        public List<RedditPost>? RedditPosts { get; set; }
     }
 }
