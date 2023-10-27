@@ -1,0 +1,142 @@
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #1a1a1a;
+    color: #c9c9c9;
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    color: #ff0099;
+    text-align: center;
+}
+
+a {
+    color: #00ccff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #ff0099;
+    text-decoration: underline;
+    transform: translateY(-2px);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #333;
+    color: #c9c9c9;
+    transition: transform 0.2s ease;
+}
+
+th {
+    background-color: #2a2a2a;
+    color: #00ccff;
+}
+
+td:hover {
+    transform: scale(1.02);
+    background-color: #333;
+}
+
+th:hover {
+    transform: scale(1.05);
+    background-color: #3a3a3a;
+}
+
+tr:hover {
+    background-color: #2a2a2a;
+}
+
+img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.table-container {
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.create-button {
+    display: inline-block;
+    background-color: #ff0099;
+    color: #1a1a1a;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    transform: scale(1);
+    box-shadow: 0 2px 5px rgba(255, 0, 153, 0.2);
+}
+
+.create-button:hover {
+    background-color: #ff66b2;
+    transform: scale(1.05);
+    box-shadow: 0 3px 10px rgba(255, 0, 153, 0.4);
+}
+
+header {
+    background-color: #111;
+    border-bottom: 2px solid #ff00cc;
+}
+
+.navbar-brand, .nav-link {
+    color: #ffcc00 !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: #ff00cc !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox=\'0 0 30 30\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath stroke=\'rgba(255, 204, 0, 1)\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-miterlimit=\'10\' d=\'M4 7h22M4 15h22M4 23h22\'/%3E%3C/svg%3E');
+}
+
+footer {
+    background-color: #111;
+    color: #ffcc00;
+    border-top: 2px solid #ff00cc;
+}
+
+footer a {
+    color: #ffcc00;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ff00cc;
+}
+
+.container {
+    color: #fff;
+}

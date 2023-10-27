@@ -1,0 +1,12 @@
+C:\Users\kylel\OneDrive\Desktop\stuff\521\521Assignment3\Webapp.Models\bin\Debug\net6.0\Webapp.Models.deps.json
+C:\Users\kylel\OneDrive\Desktop\stuff\521\521Assignment3\Webapp.Models\bin\Debug\net6.0\Webapp.Models.dll
+C:\Users\kylel\OneDrive\Desktop\stuff\521\521Assignment3\Webapp.Models\bin\Debug\net6.0\Webapp.Models.pdb
+C:\Users\kylel\OneDrive\Desktop\stuff\521\521Assignment3\Webapp.Models\obj\Debug\net6.0\Webapp.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kylel\OneDrive\Desktop\stuff\521\521Assignment3\Webapp.Models\obj\Debug\net6.0\Webapp.Models.AssemblyInfoInputs.cache
+C:\Users\kylel\OneDrive\Desktop\stuff\521\521Assignment3\Webapp.Models\obj\Debug\net6.0\Webapp.Models.AssemblyInfo.cs
+C:\Users\kylel\OneDrive\Desktop\stuff\521\521Assignment3\Webapp.Models\obj\Debug\net6.0\Webapp.Models.csproj.CoreCompileInputs.cache
+C:\Users\kylel\OneDrive\Desktop\stuff\521\521Assignment3\Webapp.Models\obj\Debug\net6.0\Webapp.Models.dll
+C:\Users\kylel\OneDrive\Desktop\stuff\521\521Assignment3\Webapp.Models\obj\Debug\net6.0\refint\Webapp.Models.dll
+C:\Users\kylel\OneDrive\Desktop\stuff\521\521Assignment3\Webapp.Models\obj\Debug\net6.0\Webapp.Models.pdb
+C:\Users\kylel\OneDrive\Desktop\stuff\521\521Assignment3\Webapp.Models\obj\Debug\net6.0\ref\Webapp.Models.dll
+C:\Users\kylel\OneDrive\Desktop\stuff\521\521Assignment3\Webapp.Models\obj\Debug\net6.0\Webapp.Models.csproj.AssemblyReference.cache

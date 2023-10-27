@@ -1,0 +1,82 @@
+﻿@model Webapp.Models.Actor
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Actor</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IMDBactor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.ActionLink(Model.Name, null, null, null, new { href = Model.IMDBactor, target = "_blank" })
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MovieImage)
+        </dt>
+        <dd class = "col-sm-10">
+            @if (Model.MovieImage != null && Model.MovieImage.Length != 0)
+            {
+                <img height="150" src="@Url.Action("GetActorPhoto", "Actors", new {Model.Id})" />
+            }
+        </dd>
+
+        @if (Model.RedditPosts != null && Model.RedditPosts.Count > 0)
+        {
+            <h2>Reddit Posts</h2>
+            <h3>
+                Percent Score: @($"{Model.PercentScore:F2}") %
+                <span>|</span>
+                Overall Sentiment: @Model.OverallSentiment
+            </h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Reddit Post</th>
+                        <th>Sentiment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var redditPost in Model.RedditPosts.Take(100))
+                    {
+                        <tr>
+                            <td>@redditPost.Content</td>
+                            <td>@redditPost.Sentiment</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p>No Reddit posts available for this actor.</p>
+        }
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

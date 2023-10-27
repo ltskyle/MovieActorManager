@@ -1,0 +1,130 @@
+﻿@model Webapp.Models.MovieDetailsVM
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Movie</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.movie.Title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.movie.Title)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.movie.IMDBmovie)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.ActionLink(Model.movie.Title, null, null, null, new { href = Model.movie.IMDBmovie, target = "_blank" })
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.movie.Genre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.movie.Genre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.movie.YearReleased)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.movie.YearReleased)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.movie.MovieImage)
+        </dt>
+        <dd class = "col-sm-10">
+            @if (Model.movie.MovieImage != null && Model.movie.MovieImage.Length != 0)
+            {
+                <img height="150" src="@Url.Action("GetMoviePhoto", "Movies", new {Model.movie.Id})" />
+            }
+        </dd>
+    </dl>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Actor Name
+            </th>
+            <th>
+                Gender
+            </th>
+            <th>
+                Age
+            </th>
+            <th>
+                IMDB Link
+            </th>
+            <th>
+                Image
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.actors)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Age)
+                </td>
+                <td>
+                    @Html.ActionLink(item.Name, null, null, null, new { href = item.IMDBactor, target = "_blank" })
+                </td>
+                <td>
+                    @if (item.MovieImage != null && item.MovieImage.Length != 0)
+                    {
+                        <img height="50" src="@Url.Action("GetActorPhoto", "Actors", new {item.Id})" />
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@if (Model.RedditPosts != null && Model.RedditPosts.Count > 0)
+{
+    <h2>Reddit Posts</h2>
+    <h3>
+        Percent Score: @($"{Model.PercentScore:F2}") %
+        <span>|</span>
+        Overall Sentiment: @Model.OverallSentiment
+    </h3>
+    <div class="table-container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Reddit Post</th>
+                <th>Sentiment</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var redditPost in Model.RedditPosts.Take(100))
+            {
+                <tr>
+                    <td>@redditPost.Content</td>
+                    <td>@redditPost.Sentiment</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    </div>
+}
+else
+{
+    <p>No Reddit posts available for this movie.</p>
+}
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.movie.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "EDTaaRD4sRUkZxys2f+ZRcUrbaGUVNsJRmisDHkCnrGE3YIni3wmBv44XoBVz+VqP+2XO6yc1mjvuyjJ+g9Xsw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\kylel\\OneDrive\\Desktop\\stuff\\521\\521Assignment3\\Webapp.Models\\Webapp.Models.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kylel\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\kylel\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\kylel\\.nuget\\packages\\reddit\\1.5.2\\reddit.1.5.2.nupkg.sha512",
+    "C:\\Users\\kylel\\.nuget\\packages\\restsharp\\106.6.9\\restsharp.106.6.9.nupkg.sha512",
+    "C:\\Users\\kylel\\.nuget\\packages\\vadersharp2\\3.3.2.1\\vadersharp2.3.3.2.1.nupkg.sha512"
+  ],
+  "logs": []
+}
